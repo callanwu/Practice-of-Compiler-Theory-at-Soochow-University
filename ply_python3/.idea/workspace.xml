@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bcc26321-0796-4b35-8441-de256a4ff7c8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../cyk/PCFG.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../cyk/PCFG.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/.idea/yacc_example.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/calclex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/parser.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/parsetab.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/yacc_example/yacc_example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/~$第9次课.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../第九次课/化学表达式/第9次课.docx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="22DPIZfspydxngZYyMbLY9aXzk0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcc26321-0796-4b35-8441-de256a4ff7c8" name="Changes" comment="" />
+      <created>1639369107626</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639369107626</updated>
+    </task>
+    <servers />
+  </component>
+</project>

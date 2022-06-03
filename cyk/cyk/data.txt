@@ -1,0 +1,19 @@
+S -> NP VP prob:0.9
+S -> VP prob:0.1
+VP -> V NP prob:0.5
+VP -> V prob:0.1
+VP -> V @VP_V prob:0.3
+VP -> V PP prob:0.1
+@VP_V -> NP PP prob:1.0
+NP -> NP NP prob:0.1
+NP -> NP PP prob:0.2
+NP -> N prob:0.7
+PP -> P NP prob:1.0
+N -> people prob:0.5
+N -> fish prob:0.2
+N -> tanks prob:0.2
+N -> rods prob:0.1
+V -> people prob:0.1
+V -> fish prob:0.6
+V -> tanks prob:0.3
+P -> with prob:1.0

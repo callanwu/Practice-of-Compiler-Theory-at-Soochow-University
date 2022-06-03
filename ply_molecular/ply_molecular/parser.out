@@ -1,0 +1,94 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> chemical_equation
+Rule 1     chemical_equation -> <empty>
+Rule 2     chemical_equation -> species_list
+Rule 3     species_list -> species_list species
+Rule 4     species_list -> species
+Rule 5     species -> SYMBOL
+Rule 6     species -> SYMBOL COUNT
+
+Terminals, with rules where they appear
+
+COUNT                : 6
+SYMBOL               : 5 6
+error                : 
+
+Nonterminals, with rules where they appear
+
+chemical_equation    : 0
+species              : 3 4
+species_list         : 2 3
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . chemical_equation
+    (1) chemical_equation -> .
+    (2) chemical_equation -> . species_list
+    (3) species_list -> . species_list species
+    (4) species_list -> . species
+    (5) species -> . SYMBOL
+    (6) species -> . SYMBOL COUNT
+
+    $end            reduce using rule 1 (chemical_equation -> .)
+    SYMBOL          shift and go to state 4
+
+    chemical_equation              shift and go to state 1
+    species_list                   shift and go to state 2
+    species                        shift and go to state 3
+
+state 1
+
+    (0) S' -> chemical_equation .
+
+
+
+state 2
+
+    (2) chemical_equation -> species_list .
+    (3) species_list -> species_list . species
+    (5) species -> . SYMBOL
+    (6) species -> . SYMBOL COUNT
+
+    $end            reduce using rule 2 (chemical_equation -> species_list .)
+    SYMBOL          shift and go to state 4
+
+    species                        shift and go to state 5
+
+state 3
+
+    (4) species_list -> species .
+
+    SYMBOL          reduce using rule 4 (species_list -> species .)
+    $end            reduce using rule 4 (species_list -> species .)
+
+
+state 4
+
+    (5) species -> SYMBOL .
+    (6) species -> SYMBOL . COUNT
+
+    SYMBOL          reduce using rule 5 (species -> SYMBOL .)
+    $end            reduce using rule 5 (species -> SYMBOL .)
+    COUNT           shift and go to state 6
+
+
+state 5
+
+    (3) species_list -> species_list species .
+
+    SYMBOL          reduce using rule 3 (species_list -> species_list species .)
+    $end            reduce using rule 3 (species_list -> species_list species .)
+
+
+state 6
+
+    (6) species -> SYMBOL COUNT .
+
+    SYMBOL          reduce using rule 6 (species -> SYMBOL COUNT .)
+    $end            reduce using rule 6 (species -> SYMBOL COUNT .)
+

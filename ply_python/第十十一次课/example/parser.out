@@ -1,0 +1,435 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> statements
+Rule 2     statements -> statements statement
+Rule 3     statements -> statement
+Rule 4     statement -> assignment
+Rule 5     statement -> operation
+Rule 6     statement -> print
+Rule 7     assignment -> VARIABLE = NUMBER
+Rule 8     operation -> VARIABLE = expr
+Rule 9     expr -> expr + term
+Rule 10    expr -> expr - term
+Rule 11    expr -> term
+Rule 12    term -> term * factor
+Rule 13    term -> term / factor
+Rule 14    term -> factor
+Rule 15    factor -> VARIABLE
+Rule 16    factor -> NUMBER
+Rule 17    print -> PRINT ( values )
+Rule 18    values -> VARIABLE
+Rule 19    values -> values , VARIABLE
+
+Terminals, with rules where they appear
+
+(                    : 17
+)                    : 17
+*                    : 12
++                    : 9
+,                    : 19
+-                    : 10
+/                    : 13
+=                    : 7 8
+NUMBER               : 7 16
+PRINT                : 17
+VARIABLE             : 7 8 15 18 19
+error                : 
+
+Nonterminals, with rules where they appear
+
+assignment           : 4
+expr                 : 8 9 10
+factor               : 12 13 14
+operation            : 5
+print                : 6
+program              : 0
+statement            : 2 3
+statements           : 1 2
+term                 : 9 10 11 12 13
+values               : 17 19
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . program
+    (1) program -> . statements
+    (2) statements -> . statements statement
+    (3) statements -> . statement
+    (4) statement -> . assignment
+    (5) statement -> . operation
+    (6) statement -> . print
+    (7) assignment -> . VARIABLE = NUMBER
+    (8) operation -> . VARIABLE = expr
+    (17) print -> . PRINT ( values )
+
+    VARIABLE        shift and go to state 7
+    PRINT           shift and go to state 8
+
+    program                        shift and go to state 1
+    statements                     shift and go to state 2
+    statement                      shift and go to state 3
+    assignment                     shift and go to state 4
+    operation                      shift and go to state 5
+    print                          shift and go to state 6
+
+state 1
+
+    (0) S' -> program .
+
+
+
+state 2
+
+    (1) program -> statements .
+    (2) statements -> statements . statement
+    (4) statement -> . assignment
+    (5) statement -> . operation
+    (6) statement -> . print
+    (7) assignment -> . VARIABLE = NUMBER
+    (8) operation -> . VARIABLE = expr
+    (17) print -> . PRINT ( values )
+
+    $end            reduce using rule 1 (program -> statements .)
+    VARIABLE        shift and go to state 7
+    PRINT           shift and go to state 8
+
+    statement                      shift and go to state 9
+    assignment                     shift and go to state 4
+    operation                      shift and go to state 5
+    print                          shift and go to state 6
+
+state 3
+
+    (3) statements -> statement .
+
+    VARIABLE        reduce using rule 3 (statements -> statement .)
+    PRINT           reduce using rule 3 (statements -> statement .)
+    $end            reduce using rule 3 (statements -> statement .)
+
+
+state 4
+
+    (4) statement -> assignment .
+
+    VARIABLE        reduce using rule 4 (statement -> assignment .)
+    PRINT           reduce using rule 4 (statement -> assignment .)
+    $end            reduce using rule 4 (statement -> assignment .)
+
+
+state 5
+
+    (5) statement -> operation .
+
+    VARIABLE        reduce using rule 5 (statement -> operation .)
+    PRINT           reduce using rule 5 (statement -> operation .)
+    $end            reduce using rule 5 (statement -> operation .)
+
+
+state 6
+
+    (6) statement -> print .
+
+    VARIABLE        reduce using rule 6 (statement -> print .)
+    PRINT           reduce using rule 6 (statement -> print .)
+    $end            reduce using rule 6 (statement -> print .)
+
+
+state 7
+
+    (7) assignment -> VARIABLE . = NUMBER
+    (8) operation -> VARIABLE . = expr
+
+    =               shift and go to state 10
+
+
+state 8
+
+    (17) print -> PRINT . ( values )
+
+    (               shift and go to state 11
+
+
+state 9
+
+    (2) statements -> statements statement .
+
+    VARIABLE        reduce using rule 2 (statements -> statements statement .)
+    PRINT           reduce using rule 2 (statements -> statements statement .)
+    $end            reduce using rule 2 (statements -> statements statement .)
+
+
+state 10
+
+    (7) assignment -> VARIABLE = . NUMBER
+    (8) operation -> VARIABLE = . expr
+    (9) expr -> . expr + term
+    (10) expr -> . expr - term
+    (11) expr -> . term
+    (12) term -> . term * factor
+    (13) term -> . term / factor
+    (14) term -> . factor
+    (15) factor -> . VARIABLE
+    (16) factor -> . NUMBER
+
+    NUMBER          shift and go to state 13
+    VARIABLE        shift and go to state 12
+
+    expr                           shift and go to state 14
+    term                           shift and go to state 15
+    factor                         shift and go to state 16
+
+state 11
+
+    (17) print -> PRINT ( . values )
+    (18) values -> . VARIABLE
+    (19) values -> . values , VARIABLE
+
+    VARIABLE        shift and go to state 18
+
+    values                         shift and go to state 17
+
+state 12
+
+    (15) factor -> VARIABLE .
+
+    *               reduce using rule 15 (factor -> VARIABLE .)
+    /               reduce using rule 15 (factor -> VARIABLE .)
+    +               reduce using rule 15 (factor -> VARIABLE .)
+    -               reduce using rule 15 (factor -> VARIABLE .)
+    VARIABLE        reduce using rule 15 (factor -> VARIABLE .)
+    PRINT           reduce using rule 15 (factor -> VARIABLE .)
+    $end            reduce using rule 15 (factor -> VARIABLE .)
+
+
+state 13
+
+    (7) assignment -> VARIABLE = NUMBER .
+    (16) factor -> NUMBER .
+
+  ! reduce/reduce conflict for VARIABLE resolved using rule 7 (assignment -> VARIABLE = NUMBER .)
+  ! reduce/reduce conflict for PRINT resolved using rule 7 (assignment -> VARIABLE = NUMBER .)
+  ! reduce/reduce conflict for $end resolved using rule 7 (assignment -> VARIABLE = NUMBER .)
+    VARIABLE        reduce using rule 7 (assignment -> VARIABLE = NUMBER .)
+    PRINT           reduce using rule 7 (assignment -> VARIABLE = NUMBER .)
+    $end            reduce using rule 7 (assignment -> VARIABLE = NUMBER .)
+    *               reduce using rule 16 (factor -> NUMBER .)
+    /               reduce using rule 16 (factor -> NUMBER .)
+    +               reduce using rule 16 (factor -> NUMBER .)
+    -               reduce using rule 16 (factor -> NUMBER .)
+
+  ! VARIABLE        [ reduce using rule 16 (factor -> NUMBER .) ]
+  ! PRINT           [ reduce using rule 16 (factor -> NUMBER .) ]
+  ! $end            [ reduce using rule 16 (factor -> NUMBER .) ]
+
+
+state 14
+
+    (8) operation -> VARIABLE = expr .
+    (9) expr -> expr . + term
+    (10) expr -> expr . - term
+
+    VARIABLE        reduce using rule 8 (operation -> VARIABLE = expr .)
+    PRINT           reduce using rule 8 (operation -> VARIABLE = expr .)
+    $end            reduce using rule 8 (operation -> VARIABLE = expr .)
+    +               shift and go to state 19
+    -               shift and go to state 20
+
+
+state 15
+
+    (11) expr -> term .
+    (12) term -> term . * factor
+    (13) term -> term . / factor
+
+    +               reduce using rule 11 (expr -> term .)
+    -               reduce using rule 11 (expr -> term .)
+    VARIABLE        reduce using rule 11 (expr -> term .)
+    PRINT           reduce using rule 11 (expr -> term .)
+    $end            reduce using rule 11 (expr -> term .)
+    *               shift and go to state 21
+    /               shift and go to state 22
+
+
+state 16
+
+    (14) term -> factor .
+
+    *               reduce using rule 14 (term -> factor .)
+    /               reduce using rule 14 (term -> factor .)
+    +               reduce using rule 14 (term -> factor .)
+    -               reduce using rule 14 (term -> factor .)
+    VARIABLE        reduce using rule 14 (term -> factor .)
+    PRINT           reduce using rule 14 (term -> factor .)
+    $end            reduce using rule 14 (term -> factor .)
+
+
+state 17
+
+    (17) print -> PRINT ( values . )
+    (19) values -> values . , VARIABLE
+
+    )               shift and go to state 23
+    ,               shift and go to state 24
+
+
+state 18
+
+    (18) values -> VARIABLE .
+
+    )               reduce using rule 18 (values -> VARIABLE .)
+    ,               reduce using rule 18 (values -> VARIABLE .)
+
+
+state 19
+
+    (9) expr -> expr + . term
+    (12) term -> . term * factor
+    (13) term -> . term / factor
+    (14) term -> . factor
+    (15) factor -> . VARIABLE
+    (16) factor -> . NUMBER
+
+    VARIABLE        shift and go to state 12
+    NUMBER          shift and go to state 26
+
+    term                           shift and go to state 25
+    factor                         shift and go to state 16
+
+state 20
+
+    (10) expr -> expr - . term
+    (12) term -> . term * factor
+    (13) term -> . term / factor
+    (14) term -> . factor
+    (15) factor -> . VARIABLE
+    (16) factor -> . NUMBER
+
+    VARIABLE        shift and go to state 12
+    NUMBER          shift and go to state 26
+
+    term                           shift and go to state 27
+    factor                         shift and go to state 16
+
+state 21
+
+    (12) term -> term * . factor
+    (15) factor -> . VARIABLE
+    (16) factor -> . NUMBER
+
+    VARIABLE        shift and go to state 12
+    NUMBER          shift and go to state 26
+
+    factor                         shift and go to state 28
+
+state 22
+
+    (13) term -> term / . factor
+    (15) factor -> . VARIABLE
+    (16) factor -> . NUMBER
+
+    VARIABLE        shift and go to state 12
+    NUMBER          shift and go to state 26
+
+    factor                         shift and go to state 29
+
+state 23
+
+    (17) print -> PRINT ( values ) .
+
+    VARIABLE        reduce using rule 17 (print -> PRINT ( values ) .)
+    PRINT           reduce using rule 17 (print -> PRINT ( values ) .)
+    $end            reduce using rule 17 (print -> PRINT ( values ) .)
+
+
+state 24
+
+    (19) values -> values , . VARIABLE
+
+    VARIABLE        shift and go to state 30
+
+
+state 25
+
+    (9) expr -> expr + term .
+    (12) term -> term . * factor
+    (13) term -> term . / factor
+
+    +               reduce using rule 9 (expr -> expr + term .)
+    -               reduce using rule 9 (expr -> expr + term .)
+    VARIABLE        reduce using rule 9 (expr -> expr + term .)
+    PRINT           reduce using rule 9 (expr -> expr + term .)
+    $end            reduce using rule 9 (expr -> expr + term .)
+    *               shift and go to state 21
+    /               shift and go to state 22
+
+
+state 26
+
+    (16) factor -> NUMBER .
+
+    *               reduce using rule 16 (factor -> NUMBER .)
+    /               reduce using rule 16 (factor -> NUMBER .)
+    +               reduce using rule 16 (factor -> NUMBER .)
+    -               reduce using rule 16 (factor -> NUMBER .)
+    VARIABLE        reduce using rule 16 (factor -> NUMBER .)
+    PRINT           reduce using rule 16 (factor -> NUMBER .)
+    $end            reduce using rule 16 (factor -> NUMBER .)
+
+
+state 27
+
+    (10) expr -> expr - term .
+    (12) term -> term . * factor
+    (13) term -> term . / factor
+
+    +               reduce using rule 10 (expr -> expr - term .)
+    -               reduce using rule 10 (expr -> expr - term .)
+    VARIABLE        reduce using rule 10 (expr -> expr - term .)
+    PRINT           reduce using rule 10 (expr -> expr - term .)
+    $end            reduce using rule 10 (expr -> expr - term .)
+    *               shift and go to state 21
+    /               shift and go to state 22
+
+
+state 28
+
+    (12) term -> term * factor .
+
+    *               reduce using rule 12 (term -> term * factor .)
+    /               reduce using rule 12 (term -> term * factor .)
+    +               reduce using rule 12 (term -> term * factor .)
+    -               reduce using rule 12 (term -> term * factor .)
+    VARIABLE        reduce using rule 12 (term -> term * factor .)
+    PRINT           reduce using rule 12 (term -> term * factor .)
+    $end            reduce using rule 12 (term -> term * factor .)
+
+
+state 29
+
+    (13) term -> term / factor .
+
+    *               reduce using rule 13 (term -> term / factor .)
+    /               reduce using rule 13 (term -> term / factor .)
+    +               reduce using rule 13 (term -> term / factor .)
+    -               reduce using rule 13 (term -> term / factor .)
+    VARIABLE        reduce using rule 13 (term -> term / factor .)
+    PRINT           reduce using rule 13 (term -> term / factor .)
+    $end            reduce using rule 13 (term -> term / factor .)
+
+
+state 30
+
+    (19) values -> values , VARIABLE .
+
+    )               reduce using rule 19 (values -> values , VARIABLE .)
+    ,               reduce using rule 19 (values -> values , VARIABLE .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: reduce/reduce conflict in state 13 resolved using rule (assignment -> VARIABLE = NUMBER)
+WARNING: rejected rule (factor -> NUMBER) in state 13
