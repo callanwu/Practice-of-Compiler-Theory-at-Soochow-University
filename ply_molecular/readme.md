@@ -118,7 +118,7 @@ for tok in iter(lex.token, None):
 
 结果如下
 
-![image-20211112135314512](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20211112135314512.png)
+![image-20220604135957580](../images/image-20220604135957580.png)
 
 ## 使用yacc进行语法分析
 
@@ -180,7 +180,7 @@ print(yacc.parse("H2SO4"))
 
 结果如下
 
-![image-20211112140407222](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20211112140407222.png)
+![image-20220604140019080](../images/image-20220604140019080.png)
 
 定义原子计数函数
 
@@ -218,7 +218,7 @@ if __name__ == "__main__":
 
 结果如下
 
-![image-20211112141325344](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20211112141325344.png)
+![image-20220604140052925](../images/image-20220604140052925.png)
 
 ## 其他
 

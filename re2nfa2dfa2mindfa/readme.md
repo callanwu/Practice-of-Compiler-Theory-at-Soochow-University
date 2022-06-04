@@ -41,19 +41,19 @@
 
   - basic
 
-    ![img](https://deniskyashif.com/images/posts/2019-02-20-regex/symbol-nfa.png)
+    ![image-20220604143340935](../images/image-20220604143340935.png)
 
   - line
 
-    ![img](https://deniskyashif.com/images/posts/2019-02-20-regex/union.png)
+    ![image-20220604143352724](../images/image-20220604143352724.png)
 
   - dot
 
-    ![img](https://deniskyashif.com/images/posts/2019-02-20-regex/concat.png)
+    ![image-20220604143403402](../images/image-20220604143403402.png)
 
   - star
 
-    ![img](https://deniskyashif.com/images/posts/2019-02-20-regex/closure.png)
+    ![image-20220604143412449](../images/image-20220604143412449.png)
 
 - [x] 完成实验的输入输出
 
@@ -67,7 +67,7 @@
 
 input.txt 
 
-![image-20210919111322949](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20210919111322949.png)
+![image-20220604143425249](../images/image-20220604143425249.png)
 
 主程序
 
@@ -82,11 +82,11 @@ if __name__ == '__main__':
 
 output.txt
 
-![image-20210919114942753](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20210919114942753.png)
+![image-20220604143442567](../images/image-20220604143442567.png)
 
 将output绘图检验正确性
 
-![image-20210919111915032](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20210919111915032.png)
+![image-20220604143455317](../images/image-20220604143455317.png)
 
 验证结果正确
 
@@ -127,7 +127,7 @@ output.txt
 
 input.txt 
 
-![image-20210919174742266](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20210919174742266.png)
+![image-20220604143535674](../images/image-20220604143535674.png)
 
 主程序
 
@@ -157,11 +157,11 @@ if __name__ == '__main__':
 
 output.txt
 
-![image-20210919175024812](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20210919175024812.png)
+![image-20220604143543903](../images/image-20220604143543903.png)
 
 将output绘图检验正确性
 
-<img src="C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20210919190618381.png" alt="image-20210919190618381" style="zoom: 50%;" />
+![image-20220604143555881](../images/image-20220604143555881.png)
 
 检验结果正确
 
@@ -200,7 +200,7 @@ output.txt
 
 input.txt
 
-![image-20210919182145843](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20210919182145843.png)
+![image-20220604143608088](../images/image-20220604143608088.png)
 
 主程序
 
@@ -230,11 +230,11 @@ if __name__ == '__main__':
 
 output.txt
 
-![image-20210919182518884](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20210919182518884.png)
+![image-20220604143616149](../images/image-20220604143616149.png)
 
 将output绘图检验正确性
 
-![image-20210919182552312](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20210919182552312.png)
+![image-20220604143622823](../images/image-20220604143622823.png)
 
 检验结果正确
 
