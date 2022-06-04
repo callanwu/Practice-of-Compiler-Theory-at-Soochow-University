@@ -60,8 +60,6 @@
 
   1.函数的定义的解析：通过一个函数表来保存每个函数的信息
 
-  ![image-20211206145657161](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20211206145657161.png)
-
   2.函数的调用：当函数需要调用时，访问函数表，找到相应的函数名，并进行调用
 
 ![image-20211206145703139](C:\Users\jialongwu\AppData\Roaming\Typora\typora-user-images\image-20211206145703139.png)
